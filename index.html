@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Page Turner - Online Bookstore</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Page Turner</h1>
+  <input id="q" type="search" placeholder="Search title or author" aria-label="Search books">
+  <button class="ghost" id="acct">Sign in</button>
+  <button id="cartBtn">Cart (<span id="cnt">0</span>)</button>
+</header>
+<main>
+  <div class="chips" id="chips"></div>
+  <div class="grid" id="grid"></div>
+  <h2>My orders</h2>
+  <div id="orders"><p>Sign in and place an order to see it here.</p></div>
+</main>
+
+<aside id="cart" aria-label="Shopping cart">
+  <div class="row"><strong>Your cart</strong><button class="ghost" id="closeCart">Close</button></div>
+  <div id="items"></div>
+  <p><strong>Total: <span id="total">Rs. 0</span></strong></p>
+  <label for="addr">Delivery address</label>
+  <input id="addr" placeholder="House, street, city, PIN">
+  <p><button id="order">Place order</button></p>
+  <div id="note"></div>
+</aside>
+
+<dialog id="auth">
+  <h3 id="authTitle">Sign in</h3>
+  <label for="em">Email</label><input id="em" type="email">
+  <label for="pw">Password</label><input id="pw" type="password">
+  <p id="authErr" style="color:#c0392b"></p>
+  <p><button id="go">Sign in</button> <button class="ghost" id="sw">Create account</button> <button class="ghost" id="x">Cancel</button></p>
+  <small>Demo only: accounts are stored in this browser, not on a server.</small>
+</dialog>
+
+<script src="script.js"></script>
+</body>
+</html>
